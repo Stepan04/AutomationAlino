@@ -1,12 +1,13 @@
 package tests;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import pages.PasswordPage;
 
 import static org.testng.Assert.assertTrue;
-
+@Log4j2
 
 public class AutomationForgotPassword extends BaseTest{
     private final PasswordPage passwordPage;
@@ -15,16 +16,13 @@ public class AutomationForgotPassword extends BaseTest{
         this.passwordPage = passwordPage;
     }
 
-    @Test
+    @Test(description = "Forgot password test")
     public void testForgotPassword() {
-        System.out.println("1 step");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.TextView[@text='my-app']")));
+        log.info("1 step");
+        passwordPage.getMyAppField();
         passwordPage.getMyAppField().click();
 
-        System.out.println("2 step");
-        //close error
-        passwordPage.getWaitErrorField();
-        passwordPage.getErrorField();
+        log.info("2 step");
         //click on sign in
         passwordPage.getWaitSignInField();
         passwordPage.getSignInField().click();

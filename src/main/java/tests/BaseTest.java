@@ -20,7 +20,7 @@ public class BaseTest {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.1.101:5555");
         capabilities.setCapability("platformName", "android");
-        capabilities.setCapability("app", "D:\\1project\\MyProject\\src\\main\\resources\\apk\\Expo_2.26.6_Apkpure.apk");
+        capabilities.setCapability("app", "D:\\1project\\MyProject\\src\\main\\resources\\apk\\Alino.apk");
         capabilities.setCapability("noReset", "true");
 
         URL url = new URL("http://127.0.0.1:4723/wd/hub");
@@ -33,9 +33,4 @@ public class BaseTest {
     public void closeDriver() {
         driver.quit();
     }
-
-    //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("")));
-    // driver.findElement(By.xpath("")).click();
-    // driver.findElement(By.xpath("")).sendKeys("");
-    //        Thread.sleep(Duration.ofSeconds(2));
 }

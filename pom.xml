@@ -5,20 +5,10 @@
   <groupId>com.company</groupId>
   <artifactId>AutomationAlino</artifactId>
   <version>1.0-SNAPSHOT</version>
-<!--  <name>Archetype - MyProject</name>-->
-<!--  <url>http://maven.apache.org</url>-->
-<!--  <properties>-->
-<!--    <maven.compiler.source>19</maven.compiler.source>-->
-<!--    <maven.compiler.target>19</maven.compiler.target>-->
-<!--  </properties>-->
-
-<!--  <dependencies>-->
-<!--    <dependency>-->
-<!--      <groupId>org.seleniumhq.selenium</groupId>-->
-<!--      <artifactId>selenium-java</artifactId>-->
-<!--      <version>LATEST</version>-->
-<!--    </dependency>-->
-<!--  </dependencies>-->
+  <properties>
+  <log4j-api.version>2.16.0</log4j-api.version>
+  <log4j-core.version>2.16.0</log4j-core.version>
+  </properties>
 
   <build>
     <pluginManagement>
@@ -56,6 +46,22 @@
       <version>7.4.0</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.20</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j-api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j-core.version}</version>
+    </dependency>
   </dependencies>
+
 
 </project>

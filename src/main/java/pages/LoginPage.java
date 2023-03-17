@@ -14,7 +14,6 @@ public class LoginPage {
     private By emailField = xpath("//android.widget.EditText[@text='Email']");
     private By passwordField = xpath("//android.widget.EditText[@text='Password']");
     private By loginField = xpath("//android.widget.TextView[@text='Login']");
-    private By errorField = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]");
 
 
 
@@ -33,14 +32,8 @@ public class LoginPage {
     public WebElement getLoginField() {
         return driver.findElement(loginField);
     }
-    public WebElement getErrorField() {
-        return driver.findElement(errorField);
-    }
     public WebElement getWaitMyAppField() {
         return wait.until(ExpectedConditions.presenceOfElementLocated(myAppField));
-    }
-    public WebElement getWaitErrorField() {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(errorField));
     }
     public WebElement getWaitSignInField() {
         return wait.until(ExpectedConditions.presenceOfElementLocated(signInField));

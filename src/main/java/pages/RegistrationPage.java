@@ -10,7 +10,7 @@ import static tests.BaseTest.wait;
 
 public class RegistrationPage {
     private By signInField = xpath("//android.widget.TextView[@text='sign in']");
-    private By signUpField = xpath("//android.widget.TextView[@text='Sign Up']");
+    private By signUpField = xpath("//android.widget.TextView[@text='sign up']");
     private By myAppField = xpath("//android.widget.TextView[@text='my-app']");
     private By firstNameField = xpath("//android.widget.EditText[@text='First Name']");
     private By lastNameField = xpath("//android.widget.EditText[@text='Last Name']");
@@ -20,7 +20,6 @@ public class RegistrationPage {
     private By passwordField = xpath("//android.widget.EditText[@text='Password']");
     private By confirmPasswordField = xpath("//android.widget.EditText[@text='Confirm Password']");
     private By finishSignUpField = xpath("//android.widget.TextView[@text='Sign Up']");
-    private By errorField = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]");
 
     public WebElement getFirstNameField() {
         return driver.findElement(firstNameField);
@@ -55,14 +54,9 @@ public class RegistrationPage {
     public WebElement getFinishSignUpField() {
         return driver.findElement(finishSignUpField);
     }
-    public WebElement getErrorField() {
-        return driver.findElement(errorField);
-    }
+
     public WebElement getWaitMyAppField() {
         return wait.until(ExpectedConditions.presenceOfElementLocated(myAppField));
-    }
-    public WebElement getWaitErrorField() {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(errorField));
     }
     public WebElement getWaitSignInField() {
         return wait.until(ExpectedConditions.presenceOfElementLocated(signInField));
